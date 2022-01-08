@@ -1,0 +1,111 @@
+*,*::before,*::after{
+    margin:0;
+    padding:0;
+    box-sizing: inherit;
+}
+html{
+    box-sizing:border-box;
+    font-size:62.5%;
+    overflow-y:scroll;
+    background: #E4EBF5;
+}
+.container{
+    min-height:100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-family:'Poppins', sans-serif;
+    background: #E4EBF5;
+}
+.components{
+    height:53vh;
+    border-radius:3rem;
+    box-shadow:0.8rem 0.8rem 1.4rem #c8d0e7,-0.2rem -0.2rem 1.8rem #fff;
+    padding:4rem;
+    display:grid;
+    grid-row-gap:2.5rem;
+    align-items:center;
+    width:30%;
+}
+.clock{
+    width:25rem;
+    height:25rem;
+    justify-self:center;
+    box-shadow:.3rem .3rem .6rem #c8d0e7,
+     .2rem -.2rem .5rem #fff;
+     border-radius:50%;
+     display:flex;
+     justify-content: center;
+     align-items: center;
+     position: relative;
+}
+.hand{
+    position:absolute;
+    transform-origin:bottom;
+    bottom:12.5rem;
+    border-radius:.2rem;
+    z-index:200;
+}
+.hours{
+    width:.6rem;
+    height:5.2rem;
+    background: #bec8e4;
+}
+.minutes{
+    width:.6rem;
+    height:6.8rem;
+    background: #9baacf;
+}
+.seconds{
+    width:.6rem;
+    height:10.2rem;
+    background: #6d5dfc;
+}
+.point{
+    position:absolute;
+    width:1.5rem;
+    height:1.5rem;
+    border-radius:50%;
+    background: #6d5dfc;
+    z-index:300;
+}
+.marker{
+    width:95%;
+    height:95%;
+    border-radius:50%;
+    position:relative;
+    box-shadow: inset .2rem .2rem .5rem #c8d0e7,
+    inset -.2rem -.2rem .5rem #fff;
+}
+.marker::after{
+content:'';
+width:60%;
+height:60%;
+position:absolute;
+box-shadow:inset 1px 1px 1px #c8d0e7, inset -1px -1px 1px #fff;
+border-radius:50%;
+top:20%;
+left:20%;
+filter:blur(1px);
+}
+.marker_1,.marker_2,.marker_3,.marker_4{
+    position:absolute;
+    border-radius:.1rem;
+    background: #6d5dfc;
+    box-shadow: inset 1px 1px 1px #c8d0e7, inset -1px -1px 1px #fff;
+}
+.marker_1,.marker_2{
+    width:1rem;
+    height:1.5rem;
+    left:11.6rem;
+}
+.marker_3,.marker_4{
+    width:1.5rem;
+    height:1rem;
+    top:11.6rem;
+}
+.marker_1{top:1%;}
+.marker_2{top:96%;transform:translateY(-.6rem);}
+.marker_3{left:1%;}
+.marker_4{left:96%; transform:translateX(-.6rem);}
+
